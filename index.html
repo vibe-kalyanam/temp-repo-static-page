@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIBE KALYANAM — Find Your Life Partner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #c9a227;
+      --gold-light: #e8d5a3;
+      --maroon: #6b2d3c;
+      --maroon-deep: #4a1f2a;
+      --cream: #faf6f1;
+      --charcoal: #2d2528;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--cream);
+      color: var(--charcoal);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem 1.5rem;
+      background: linear-gradient(180deg, var(--cream) 0%, rgba(250, 246, 241, 0.97) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(201, 162, 39, 0.12), transparent),
+        radial-gradient(ellipse 60% 40% at 80% 60%, rgba(107, 45, 60, 0.06), transparent);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.5rem, 8vw, 4.5rem);
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      color: var(--maroon);
+      margin-bottom: 0.5rem;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      font-weight: 300;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 2.5rem;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      max-width: 420px;
+      margin: 0 auto 2rem;
+      color: var(--charcoal);
+      opacity: 0.9;
+    }
+
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 2rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--maroon);
+      color: var(--white);
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background: var(--maroon-deep);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(107, 45, 60, 0.3);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--maroon);
+      border: 2px solid var(--maroon);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(107, 45, 60, 0.06);
+      transform: translateY(-2px);
+    }
+
+    /* Features */
+    .features {
+      padding: 4rem 1.5rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .features h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--maroon);
+      text-align: center;
+      margin-bottom: 2.5rem;
+      letter-spacing: 0.05em;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+    }
+
+    .feature-card {
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+
+    .feature-icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 1rem;
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+
+    .feature-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--maroon);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.04em;
+    }
+
+    .feature-card p {
+      font-size: 0.9rem;
+      color: var(--charcoal);
+      opacity: 0.85;
+    }
+
+    /* Footer */
+    footer {
+      padding: 2rem 1.5rem;
+      text-align: center;
+      border-top: 1px solid rgba(107, 45, 60, 0.12);
+      margin-top: 2rem;
+    }
+
+    footer .logo-small {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      color: var(--maroon);
+      margin-bottom: 0.5rem;
+    }
+
+    footer p {
+      font-size: 0.85rem;
+      color: var(--charcoal);
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="logo">VIBE KALYANAM</h1>
+        <p class="tagline">Find Your Life Partner</p>
+        <p>Begin your journey to a meaningful union. Connect with verified profiles and families who share your values.</p>
+        <div class="cta-group">
+          <a href="#" class="btn btn-primary">Register Free</a>
+          <a href="#" class="btn btn-secondary">Browse Matches</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <h2>Why VIBE KALYANAM</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">✓</div>
+          <h3>Verified Profiles</h3>
+          <p>Authentic profiles with ID verification for your peace of mind.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3>Privacy First</h3>
+          <p>Your data stays private. Control who sees your profile and contact details.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">❤</div>
+          <h3>Meaningful Matches</h3>
+          <p>Filter by community, education, profession and life goals.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="logo-small">VIBE KALYANAM</div>
+      <p>© 2025 VIBE KALYANAM. A place for genuine connections.</p>
+    </footer>
+  </main>
+</body>
+</html>
